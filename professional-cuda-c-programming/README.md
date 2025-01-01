@@ -1,0 +1,1 @@
+This folder contains the exercise from book "Professional CUDA C Programming".s
