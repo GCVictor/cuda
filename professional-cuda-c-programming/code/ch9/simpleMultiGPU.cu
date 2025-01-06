@@ -64,6 +64,14 @@ int main(int argc, char **argv) {
     ngpus = atoi(argv[1]);
   }
 
+  int iSize = size / ngpus;
+  size_t iBytes = iSize * sizeof(float);
+
+  printf(
+      "> total array size %d M, using %d devices with each device "
+      "handling %d M\n",
+      size / 1024 / 1024, ngpus, iSize / 1024 / 1024);
+
   // allocat device emory
   float **d_A = (float **)malloc(sizeof(float *) * ngpus);
   float **d_B = (float **)malloc(sizeof(float *) * ngpus);
