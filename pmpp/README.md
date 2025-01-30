@@ -1,0 +1,1 @@
+Exercise for programming massively parallel processors a hand on approach 4th edition.
